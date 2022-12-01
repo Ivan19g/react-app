@@ -40,7 +40,7 @@ export default class Contacts extends Component {
                         margin: 20px
                     }
                     .map{
-                        box-shadow: 10px 10px 0px rgb(247, 161, 2), -10px -10px 0px rgb(199, 0, 0);
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                     }
                     .name_logo{
                         display: flex;
@@ -53,13 +53,14 @@ export default class Contacts extends Component {
                         font-size: 100px;
                         font-weight: bold;
                         font-style: italic;
-                        color: rgb(199, 0, 0);
+                        color: green;
                         text-shadow: 5px 5px 0px rgb(247, 161, 2);
                         text-decoration: underline;
                     }
                     .logo{
                         display: flex;
                         align-items: center;
+                        width: 400px;
                     }
                     .ash{
                         margin-top: 0px;
@@ -73,7 +74,7 @@ export default class Contacts extends Component {
                 <main>
                     <div className="name_logo">
                         <div>
-                            <h1 className="name ash">EAZY QUIZY</h1>
+                            <h1 className="name ash">EXCURSIONS ALMATY</h1>
                             <div className="map frdivst">
                                 <a className='aframe1' href="https://yandex.kz/maps/org/1016114729/?utm_medium=mapframe&utm_source=maps">Международный университет информационных технологий</a>
                                 <a className='aframe2' href="https://yandex.kz/maps/162/almaty/category/university_college/184106140/?utm_medium=mapframe&utm_source=maps">ВУЗ в Алматы</a>
@@ -84,7 +85,7 @@ export default class Contacts extends Component {
                         <div className="logo"> <img src={Logo} alt="" /> </div>
                     </div>
                     <h1 className="name ash fs">CONTACT US:</h1>
-                    <p>E-mail: eazyquizy@quiz.com</p>
+                    <p>E-mail: Excursions@alm.com</p>
                     <p>Phone Number: +7 (727) 320-00-00</p>
                 </main>
             </>

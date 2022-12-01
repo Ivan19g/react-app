@@ -3,10 +3,9 @@ import { Container } from 'react-bootstrap';
 import Logo from '../images/logo.png';
 import Pop_up from '../Components/Pop_up';
 
-import HP from '../images/Harry.jpg';
-import Scrubs from '../images/scrubs.jpg';
-import Helloween from '../images/Helloween.png';
-import ff from '../images/ff.jpg';
+import Kolsay from '../images/Kolsay.jpg';
+import Tamgaly from '../images/Tamgaly_Tas.jpg';
+import Charin from '../images/Charin.jpg';
 
 export default class Home extends Component {
   render() {
@@ -20,20 +19,19 @@ export default class Home extends Component {
               justify-content: space-around;
               align-content: center;
               margin-bottom: 50px;
+              padding-top: 20px;
               color: var(--p);
             }
             .name{
               font-size: 125px;
               font-weight: 900;
               font-style: italic;
-              color: rgb(199, 0, 0);
+              color: green;
+              text-transform: uppercase;
               text-shadow: 5px 5px 0px rgb(247, 161, 2);
               text-decoration: underline;
               padding-bottom: 50px;
-            }
-            .Wiaq{
-              font-size: 25px; 
-              padding-left: 30px;
+              padding-top: 50px;
             }
             main{
               padding-right: 20%;
@@ -42,12 +40,12 @@ export default class Home extends Component {
               padding-bottom: 50px;
               background-color: rgb(250, 250, 250);
             }
-            .future_games{
+            .future_tours{
               min-height: 600px;
               width: 100%;
               height: 100%;
             }
-            .f_games{
+            .f_tours{
               display: flex;
               justify-content: center;
               align-items: center;
@@ -55,31 +53,37 @@ export default class Home extends Component {
               text-align: center;
               font-size: 50px;
               font-weight: 700;
-              color: rgb(199, 0, 0);
+              color: green;
               text-shadow: 3px 3px 0px rgb(247, 161, 2);
               margin-bottom: 50px;
             }
-            .games_all{
+            .tours_all{
               display: flex;
               justify-content: space-around;
               align-items: center;
             }
-            .games{
-              height: 300px;
-              width: 200px;
+            .tours{
+              height: 400px;
+              width: 400px;
               transition: 1s;
               box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-              z-index:9;
-              box-shadow: 10px 10px 0px rgb(247, 161, 2), -10px -10px 0px rgb(199, 0, 0);
+              border: 1px solid gray;
+              text-align: center;
+              font-size: 40px;
+              color: green;
+              background: white;
             }
-            .games:active{
+            .tour:active{
               transform: scale(2.0);
               overflow: hidden;
-                z-index:9;
+                z-index:99;
             }
-            .game{
-              width: 100%;
-              height:100%;
+            .tour{
+              transition: 1s;
+              z-index:9;
+              width: 360px;
+              height: 250px;
+              box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
             }
             .buttons{
               display: flex;
@@ -105,17 +109,18 @@ export default class Home extends Component {
               background: rgb(247, 161, 2);
                 color: black;
             }
+            .palaroid{
+              background:white;
+              padding: 20px;
+              
+            }
           `}
         </style>
 
         <Container className='main'>
           <div className='name_logo'>
             <div>
-              <h1 className="name" >EAZY QUIZY</h1>
-              <p className='Wiaq'>What is a quiz?
-                In a nutshell, this is an intellectual and entertaining competition.
-                Thematic, classical, musical, movie or sports quiz.
-                You are asked questions and you answer them, the more correct answers, the more chances to win.</p>
+              <h1 className="name" >excursions in Almaty</h1>
             </div>
             <div>
               <img
@@ -126,19 +131,26 @@ export default class Home extends Component {
               />
             </div>
           </div>
-          <div className="future_games">
-            <div className="f_games">GAMES:</div>
-            <div className="games_all">
-              <div className="games"><img src={Scrubs} className="game" /></div>
-              <div className="games"><img src={Helloween} className="game" /></div>
-              <div className="games"><img src={HP} className="game" /></div>
-              <div className="games"><img src={ff} className="game" /></div>
+          <div className="future_tours">
+            <div className="f_tours">Tours:</div>
+            <div className="tours_all">
+              <div className="tours">
+                <div className='palaroid'><img src={Kolsay} className="tour" /></div>
+                <p>Kolsay & Kaindy</p>
+              </div>
+              <div className="tours">
+                <div className='palaroid'><img src={Tamgaly} className="tour" /></div>
+                <p>Tamgaly Tas</p>
+              </div>
+              <div className="tours">
+                <div className='palaroid'><img src={Charin} className="tour" /></div>
+                <p>Charyn canyon</p>
+              </div>
             </div>
             <div className='buttons'>
-              <Pop_up name='Scrubs' />
-              <Pop_up name='Helloween Quiz' />
-              <Pop_up name='Harry Potter' />
-              <Pop_up name='Fast&Furius' />
+              <Pop_up name='Kolsay' />
+              <Pop_up name='Tamgaly' />
+              <Pop_up name='Charyn' />
             </div>
 
           </div>

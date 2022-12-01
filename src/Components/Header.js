@@ -2,19 +2,14 @@ import React, { Component } from 'react'
 import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import wpp from '../images/wpp_w.png'
-import inst from '../images/inst_w.png'
-import vk from '../images/vk_w.png'
 import wpp_f from '../images/wpp.png'
 import inst_f from '../images/inst.png'
 import vk_f from '../images/vk.png'
 import Logo from '../images/logo.png'
 
 import Home from '../Pages/Home';
-import Rules from '../Pages/Rules';
 import About from '../Pages/About';
 import Photos from '../Pages/Photos';
-import Login from '../Pages/Login';
 
 export default class Header extends Component {
     render() {
@@ -26,9 +21,8 @@ export default class Header extends Component {
                         font-family: 'Montserrat', serif;
                       }
                         .header{
-                            background: linear-gradient(to top left, rgb(247, 161, 2), rgb(199, 0, 0));
+                            background: linear-gradient(to top left, green, yellow);
                             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.377);
-                            padding-bottom: 20px;
                         }
                         .menu{
                             font-size: 20px;
@@ -37,10 +31,10 @@ export default class Header extends Component {
                             padding: 0;
                             display: flex;
                             align-items: center;
+                            font-weight: bolt;
                         }
                         .menu a{
                             color: white;
-                            font-weight: bolt;
                             text-decoration: none;
                             padding: 10px 15px;
                         }
@@ -50,21 +44,10 @@ export default class Header extends Component {
                             font-size: 50px;
                             font-style: italic;
                             font-weight: bold;
+                            line-height:1;
                             margin: 0px;
                             text-align: right;
-                        }
-                        .socmed{
-                            width: 100%;
-                            position: relative;	
-                            display: flex;
-                            justify-content: space-between;
-                            align-self: center;
-                            border-bottom: 1px solid white;
-                        }
-                        .socmed a{
-                            text-decoration: none;
-                            color: white;
-                            font-weight: 900;
+                            text-transform: uppercase;
                         }
                         .wpp, .insta, .vk{
                             position: relative;
@@ -82,12 +65,14 @@ export default class Header extends Component {
                             flex-direction: row;
                             align-items: center;
                             justify-content: space-between;
+                            padding-top:20px;
                         }
                         .top{
                             display: flex;
                             flex-direction: column;
                         }
                         footer{
+                            margin-top: 50px;
                             padding-top: 30px;
                             padding-bottom: 30px;
                             padding-right: 20%;
@@ -140,32 +125,11 @@ export default class Header extends Component {
                 <Router>
                     <Navbar collapseOnSelect expand="md" className='header' >
                         <Container className='top'>
-                            <div className='socmed'>
-                                <div class="wpp">
-                                    <img src={wpp} className="wpp_img" />
-                                    <a href="">
-                                        OUR WHATSAPP
-                                    </a>
-                                </div>
-                                <div class="insta">
-                                    <img src={inst} className="insta_img" />
-                                    <a href="">
-                                        OUR INSTAGRAM
-                                    </a>
-                                </div>
-                                <div class="vk">
-                                    <img src={vk} className="vk_img" />
-                                    <a href="">
-                                        OUR VK
-                                    </a>
-                                </div>
-                            </div>
                             <div className='main_m'>
                                 <div>
                                     <Navbar.Brand href="/" >
                                         <div>
-                                            <p className='h-name'> EAZY</p>
-                                            <p className='h-name'>QUIZY</p>
+                                            <img src={Logo} className='w:500px'/>
                                         </div>
                                     </Navbar.Brand>
                                 </div>
@@ -173,10 +137,8 @@ export default class Header extends Component {
                                     <Navbar.Collapse id='responsive-navbar-nav' align-right>
                                         <Nav className='menu'>
                                             <Nav.Link as={Link} to="/" > HOME </Nav.Link>
-                                            <Nav.Link as={Link} to="/rules"> RULES </Nav.Link>
                                             <Nav.Link as={Link} to="/photos"> PHOTOS </Nav.Link>
                                             <Nav.Link as={Link} to="/about"> ABOUT US </Nav.Link>
-                                            <Nav.Link as={Link} to="/login"> LOGIN </Nav.Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </div>
@@ -187,10 +149,8 @@ export default class Header extends Component {
 
                     <Routes>
                         <Route exact path='/' element={<Home />} />
-                        <Route exact path='/rules' element={<Rules />} />
                         <Route exact path='/photos' element={<Photos />} />
                         <Route exact path='/about' element={<About />} />
-                        <Route exact path='/login' element={<Login />} />
                     </Routes>
 
                     <footer>
@@ -198,10 +158,9 @@ export default class Header extends Component {
                             <div className="fir_part">
                                 <div className="foot_logo"><img src={Logo} alt="" /></div>
                                 <div className="li_text">
-                                    <p>© 2022. EazyQuizy Inc.</p>
+                                    <p>© 2022. Excursions Inc.</p>
                                     <Navbar>
                                         <Nav.Link as={Link} to="/"> Main </Nav.Link>|
-                                        <Nav.Link as={Link} to="/rules"> Rules </Nav.Link>|
                                         <Nav.Link as={Link} to="/photos"> Photos </Nav.Link>|
                                         <Nav.Link as={Link} to="/about"> About Us </Nav.Link>
                                     </Navbar>

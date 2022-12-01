@@ -16,23 +16,23 @@ function Pop_up(props) {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Registration to game {props.name}</Modal.Title>
+                    <Modal.Title>Registration to excursion {props.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Label>Team Name</Form.Label>
+                            <Form.Label>Your Name</Form.Label>
                             <Form.Control
                                 type="name"
-                                placeholder="Enter your team name"
+                                placeholder="Enter your name"
                                 autoFocus
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput">
-                            <Form.Label>City</Form.Label>
+                            <Form.Label>Date</Form.Label>
                             <Form.Control
-                                type="city"
-                                placeholder="Enter your city"
+                                type="Date"
+                                placeholder="Enter date"
                                 autoFocus
                             />
                         </Form.Group>
