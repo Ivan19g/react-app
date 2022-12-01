@@ -14,7 +14,6 @@ export default class Contacts extends Component {
                         padding-left: 20%;
                         padding-top: 50px;
                         padding-bottom: 50px;
-                        background-color: rgb(250, 250, 250);
                     }
                     .frame{
                         position:relative;
