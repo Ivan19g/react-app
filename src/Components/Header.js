@@ -8,7 +8,7 @@ import vk_f from '../images/vk.png'
 import Logo from '../images/logo.png'
 
 import Home from '../Pages/Home';
-import About from '../Pages/About';
+import About from '../Pages/About'; 
 import Photos from '../Pages/Photos';
 
 export default class Header extends Component {
